@@ -1,15 +1,15 @@
 import numpy as np
 
 class Tensor:
-    # сomputation graph node: wraps a NumPy array and tracks gradients
+    # сomputation graph node: wraps a numpy array and tracks gradients
     def __init__(self, data, requires_grad=False, _parents=(), _op=""):
-        # always store data as a float64 NumPy array for consistency
+        # always store data as a float64 numpy array for consistency
         if isinstance(data, np.ndarray):
             self.data = data.astype(np.float64)
         else:
             self.data = np.array(data, dtype=np.float64)
         self.requires_grad = requires_grad
-        # grad starts as None; it will be created lazily as a zeros array
+        # grad starts as None it will be created lazily as a zeros array
         # with the same shape as self.data once backward is triggered
         self.grad = None
         # internal fields for the computation graph
@@ -41,7 +41,7 @@ class Tensor:
 
     # backward pass
     def backward(self):
-        # Reverse-mode autograd: builds computation graph, sorts it topologically, then walks it in reverse calling each node's _backward to accumulate gradients
+        # reverse-mode autograd: builds computation graph, sorts it topologically, then walks it in reverse calling each node's _backward to accumulate gradients
         # step 1 and 2: topological sort
         topo = []
         visited = set()
