@@ -1,7 +1,7 @@
 import numpy as np
 from src.tensor import Tensor, _ensure_tensor
 
-# Elementwise operations
+# elementwise operations
 def exp(x):
     return _ensure_tensor(x).exp()
 
@@ -18,18 +18,18 @@ def sigmoid(x):
     x = _ensure_tensor(x)
     return Tensor(1.0) / (Tensor(1.0) + (-x).exp())
 
-# Reduction operations
+# reduction operations
 def sum(x, axis=None, keepdims=False):
     return _ensure_tensor(x).sum(axis=axis, keepdims=keepdims)
 
 def mean(x, axis=None, keepdims=False):
     return _ensure_tensor(x).mean(axis=axis, keepdims=keepdims)
 
-# Matrix operations
+# matrix operations
 def matmul(a, b):
     return _ensure_tensor(a) @ _ensure_tensor(b)
 
-# Loss functions
+# loss functions
 def softmax(logits):
     logits = _ensure_tensor(logits)
     # computing in NumPy directly for numerical stability but still need the backward so I build it from Tensor ops
@@ -43,8 +43,9 @@ def mse_loss(predictions, targets):
     diff = predictions - targets
     return (diff ** 2).mean()
 
-# Parameter initialisation helpers
+# parameter initialisation helpers
 def he_init(shape, rng=None):
+    # for relu
     if rng is None:
         rng = np.random.default_rng()
     fan_in = shape[0]
@@ -52,7 +53,7 @@ def he_init(shape, rng=None):
     return rng.normal(0.0, std, shape)
 
 def xavier_init(shape, rng=None):
-    # Xavier (Glorot) initialisation, variance = 1 / fan_in
+    # for sigmoid/tanh
     if rng is None:
         rng = np.random.default_rng()
     fan_in = shape[0]
