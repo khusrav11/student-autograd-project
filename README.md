@@ -15,7 +15,7 @@ A NumPy-based automatic differentiation (autograd) engine built **from scratch**
 ## Installation
 
 ```bash
-git clone <>
+git clone <https://github.com/khusrav11/student-autograd-project>
 cd student-autograd-project
 pip install -r requirements.txt
 ```
@@ -129,7 +129,12 @@ student-autograd-project/
 │   ├── generate_spiral.py
 │   ├── train_model.py
 │   └── debug_broken_training.py
-├── results/                ← all saved plots and reports
+├── results/
+│    ├── loss_curve.png
+│    ├── accuracy_curve.png
+│    ├── decision_boundary.png
+│    ├── gradient_check_results.txt
+│    ├── debugging_evidence.png
 └── report/
     └── final_report.md     ← full written report + conceptual Q&A
 ```
