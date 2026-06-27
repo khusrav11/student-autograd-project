@@ -1,0 +1,23 @@
+test_01_scalar_expression (__main__.TestRequiredGradChecks.test_01_scalar_expression) ... ok
+test_02_vector_elementwise (__main__.TestRequiredGradChecks.test_02_vector_elementwise) ... ok
+test_03_matmul_with_bias (__main__.TestRequiredGradChecks.test_03_matmul_with_bias) ... ok
+test_04_mse_loss (__main__.TestRequiredGradChecks.test_04_mse_loss) ... ok
+test_05_softmax_cross_entropy (__main__.TestRequiredGradChecks.test_05_softmax_cross_entropy) ... ok
+test_c01_tanh_chain (__main__.TestCustomGradChecks.test_c01_tanh_chain) ... ok
+test_c02_relu_matmul (__main__.TestCustomGradChecks.test_c02_relu_matmul) ... ok
+test_c03_log_of_softmax_probs (__main__.TestCustomGradChecks.test_c03_log_of_softmax_probs) ... ok
+test_c04_two_layer_mlp (__main__.TestCustomGradChecks.test_c04_two_layer_mlp) ... ok
+test_c05_broadcast_mul (__main__.TestCustomGradChecks.test_c05_broadcast_mul) ... ok
+test_c06_div_then_exp (__main__.TestCustomGradChecks.test_c06_div_then_exp) ... ok
+test_c07_large_logits_stability (__main__.TestCustomGradChecks.test_c07_large_logits_stability) ... ok
+test_c08_mean_axis_then_mul (__main__.TestCustomGradChecks.test_c08_mean_axis_then_mul) ... ok
+test_c09_power_chain (__main__.TestCustomGradChecks.test_c09_power_chain) ... ok
+test_c10_nested_relu_tanh (__main__.TestCustomGradChecks.test_c10_nested_relu_tanh) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.022s
+
+OK
+
+SUMMARY: 15/15 gradient checks passed.
+All checks PASSED
