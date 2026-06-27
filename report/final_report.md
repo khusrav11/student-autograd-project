@@ -208,10 +208,10 @@ student-autograd-project/
 ├── README.md
 ├── requirements.txt
 ├── src/
-│   ├── tensor.py              ← Tensor class, all backward rules
-│   ├── operations.py          ← functional API
-│   ├── neural_network.py      ← Linear, MLP, SGD
-│   └── losses.py              ← softmax_cross_entropy, MSE
+│   ├── tensor.py           ← Tensor class + all backward rules
+│   ├── operations.py       ← functional API wrappers
+│   ├── neural_network.py   ← Linear layer, MLP, SGD optimizer
+│   └── losses.py           ← loss functions
 ├── tests/
 │   ├── test_basic_ops.py
 │   ├── test_matmul.py
@@ -222,8 +222,13 @@ student-autograd-project/
 │   ├── train_model.py
 │   └── debug_broken_training.py
 ├── results/
+│    ├── loss_curve.png
+│    ├── accuracy_curve.png
+│    ├── decision_boundary.png
+│    ├── gradient_check_results.txt
+│    ├── debugging_evidence.png
 └── report/
-    └── final_report.md
+    └── final_report.md     ← full written report + conceptual Q&A
 ```
 
 ---
