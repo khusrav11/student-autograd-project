@@ -2,7 +2,7 @@
 **Course:** Machine Learning
 **Project:** Mini Autograd Engine and Neural Network Training
 **Author:** Ziyoboev Khusravkhon
-**Date:** 26.06.2026
+**Date:** 27.06.2026
 
 ---
 
